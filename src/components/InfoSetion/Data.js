@@ -1,0 +1,51 @@
+export const homeObjOne = {
+  id: "about",
+  //   lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topline: "Fake News Detection",
+  headline: "Today News are fake .... No Authenticity",
+  description: "Enthengilm ezhuthaam",
+  buttonLabel: "Get Started",
+  imgStart: false,
+  img: require("../../images/svg-1.svg").default,
+  alt: "Car",
+  dark: true,
+  primary: true,
+  darkText: false,
+};
+
+export const homeObjTwo = {
+  id: "discover",
+  //   lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topline: "Fake News Detection",
+  headline: "Today News are fake .... No Authenticity",
+  description: "Enthengilm ezhuthaam",
+  buttonLabel: "Get Started",
+  imgStart: false,
+  img: require("../../images/svg-1.svg").default,
+  alt: "Car",
+  dark: true,
+  primary: true,
+  darkText: false,
+};
+
+export const homeObjThree = {
+  id: "signup",
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topline: "Join our Team",
+  headline: "Creating an account is extremely easy",
+  description:
+    "Get everything set up and ready in 10 minutes. All you need to do is add your information and you are ready to go",
+  buttonLabel: "Start Now",
+  imgStart: true,
+  img: require("../../images/svg-2.svg").default,
+  alt: "paper",
+  dark: true,
+  primary: true,
+  darkText: false,
+};
