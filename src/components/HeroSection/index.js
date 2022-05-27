@@ -12,23 +12,33 @@ const HeroSection = () => {
         setHover(!hover)
     }
 
+    const [data, setData]= useState(null);
+    const [print, setPrint] = useState(false);
+
+    function getData(val) {
+        setData(val.target.value);
+        setPrint(false);
+    }
+
   return (
    <HeroContainer id="home">
        <HeroBg>
            <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
        </HeroBg>
        <HeroContent>
-           <HeroH1>Virtual Banking Made Easy</HeroH1> 
+           <HeroH1><input type = "text" onChange={getData} /></HeroH1> 
            {/* ivide modify cheyyanam and a text area insert cheyyanam */}
-           <HeroP>Sign up for a new account</HeroP>
+           <HeroP>{print ? <h1>{data}</h1> : null}</HeroP>
            <HeroBtnWrapper>
                <Button 
-               to='signup' 
+               onClick = {() => setPrint(true)}
+              // to='signup' 
                onMouseEnter={onHover} 
                onMouseLeave={onHover}
                primary='true'
                dark='true'>
-                   Get started {hover ? <ArrowForward /> : <ArrowRight/>}
+                   {/* Get started {hover ? <ArrowForward /> : <ArrowRight/>} */}
+                   Check It
                </Button>
            </HeroBtnWrapper>
        </HeroContent>

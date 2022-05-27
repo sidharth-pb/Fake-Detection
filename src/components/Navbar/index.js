@@ -36,7 +36,7 @@ const Navbar = ({ toggle }) => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
-            <h1>dolla</h1>
+            <h1>Faker</h1>
             {/* ivide change chythaaal title chaange aakum  */}
           </NavLogo>
           <MobileIcon onClick={toggle}>
