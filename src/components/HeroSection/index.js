@@ -13,6 +13,7 @@ const HeroSection = () => {
     }
 
     const [data, setData]= useState(null);
+    const [out, setOut]= useState(null);
     const [print, setPrint] = useState(false);
 
     function getData(val) {
@@ -21,6 +22,7 @@ const HeroSection = () => {
     }
 
   return (
+      
    <HeroContainer id="home">
        <HeroBg>
            <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
@@ -28,10 +30,11 @@ const HeroSection = () => {
        <HeroContent>
            <HeroH1><input type = "text" onChange={getData} /></HeroH1> 
            {/* ivide modify cheyyanam and a text area insert cheyyanam */}
-           <HeroP>{print ? <h1>{data}</h1> : null}</HeroP>
+           <HeroP>{print ? <h1>{out}</h1> : null}</HeroP>
            <HeroBtnWrapper>
                <Button 
-               onClick = {() => setPrint(true)}
+               onClick = {() => {const reqOpt = {method: 'POST', headers:{"Content-Type":'application/json'}, body: JSON.stringify({data})} 
+               fetch("http://127.0.0.1:5000/react", reqOpt).then(res => res.json()).then(res => {setOut(res); setPrint(true)})}}
               // to='signup' 
                onMouseEnter={onHover} 
                onMouseLeave={onHover}
